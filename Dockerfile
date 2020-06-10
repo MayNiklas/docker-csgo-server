@@ -19,4 +19,5 @@ ENV	REGION=3 \
 	TICKRATE=64
 
 COPY ./entrypoint.sh /
+COPY ./server.cfg.template /
 ENTRYPOINT ["sh", "/entrypoint.sh"]
