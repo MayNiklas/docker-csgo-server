@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Template out the server config
-sh -c 'echo "'"$(cat server.cfg.template)"'" >> /home/cs/csgo_server/csgo/cfg/server.cfg'
+sh -c 'echo "'"$(cat /server.cfg.template)"'" >> /home/cs/csgo_server/csgo/cfg/server.cfg'
 
 # Set groups and permissions
 groupadd cs -g ${GID:-1000}
