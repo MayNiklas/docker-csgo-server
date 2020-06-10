@@ -1,0 +1,15 @@
+hostname "$CSGO_HOSTNAME"
+sv_maxrate 0
+sv_minrate 80000
+sm_cvar sv_maxcmdrate 128
+sv_mincmdrate 128
+sv_minupdaterate 128
+sm_cvar sv_maxupdaterate 128
+game_mode $GAMEMODE
+game_type $GAMETYPE
+map $STARTMAP
+mapgroup $MAPGROUP
+rcon_password $RCONPW
+sv_password $PW
+sv_region $REGION
+sv_setsteamaccount $TOKEN
