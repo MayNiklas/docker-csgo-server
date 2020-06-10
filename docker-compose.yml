@@ -5,22 +5,22 @@ services:
     build: .
     ports:
       - "27015:27015/udp"
-#      - "27015:27015/tcp" // needed for RCON
+      - "27015:27015/tcp" # Needed for RCON
     environment:
-      - TICKRATE=128      // 64 Ticks by default
+      - TICKRATE=128      # Set to 64 ticks by default
 #      - UID=
 #      - GID=
-#      - TOKEN=           // Include your CS Go API Server Key!
-#      - WORKSHOPTOKEN=   // Needed to download workshop content
-#      - Hostname=        
+#      - TOKEN=           # Include your CS:GO API key
+#      - WORKSHOPTOKEN=   # Needed to download workshop content
+#      - CSGO_HOSTNAME=
 #      - MAXPLAYERS=
 #      - GAMETYPE=
 #      - GAMEMODE=
 #      - MAPGROUP=
 #      - STARTMAP=
-#      - RCONPW=          // Set your RCON password here!
-#      - PW=              // Set if password should be requirered to join
-#      - REGION=          
+#      - RCONPW=          # Set your RCON password here!
+#      - PW=              # Set if password should be requiered to join
+#      - REGION=
 
     restart: unless-stopped
     stdin_open: true
