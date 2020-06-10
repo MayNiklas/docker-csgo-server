@@ -1,0 +1,26 @@
+version: '3'
+services:
+  csgo-server:
+    container_name: csgo-server
+    build: .
+    ports:
+      - "27015:27015/udp"
+    environment:
+      - TICKRATE=128      // 64 Ticks by default
+#      - UID=
+#      - GID=
+#      - TOKEN=           // Include your CS Go API Server Key!
+#      - WORKSHOPTOKEN=   // Needed to download workshop content
+#      - Hostname=        
+#      - MAXPLAYERS=
+#      - GAMETYPE=
+#      - GAMEMODE=
+#      - MAPGROUP=
+#      - STARTMAP=
+#      - RCONPW=          // Set your RCON password here!
+#      - PW=              // Set if password should be requirered to join
+#      - REGION=          
+
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
