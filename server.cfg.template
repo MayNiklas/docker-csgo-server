@@ -13,3 +13,4 @@ rcon_password $RCONPW
 sv_password $PW
 sv_region $REGION
 sv_setsteamaccount $TOKEN
+sv_competitive_official_5v5 1
