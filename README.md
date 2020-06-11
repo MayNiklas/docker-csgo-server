@@ -13,7 +13,10 @@ under a UID / GUI of your choice, which will be helpful for resource management
 on your host’s server.
 
 Feel free to fork the repository and change it to your liking.
-I'm going to implement an update mechanism within the container soon!
+
+## Updates
+
+As soon there is a new version of the game, the server will wait untill the current game finishes. It will automatically update the game before restarting itself.
 
 ## Configuration template
 
