@@ -15,4 +15,7 @@ su cs -c '/home/cs/csgo_server/srcds_run\
 	-game csgo\
 	-maxplayers_override $MAXPLAYERS\
 	-net_port_try 1\
-	-tickrate $TICKRATE'
+	-tickrate $TICKRATE \
+	-autoupdate \
+	-steamcmd_script /home/cs/autoupdate.sh \
+	-steam_dir /home/cs'

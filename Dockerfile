@@ -18,6 +18,13 @@ ENV	REGION=3 \
 	STARTMAP="de_dust" \
 	TICKRATE=64
 
+# For whatever reason, the original 'srcds_run' file is broken. It's using "steam.sh" instead of "steamcmd.sh"
+RUN sed -i 's/steam.sh/steamcmd.sh/g' /home/cs/csgo_server/srcds_run
+
+# Create the autoupdate script which is triggered when the round ends
+RUN echo 'login anonymous\nforce_install_dir /home/cs/csgo_server/\napp_update 740 validate\nquit' >> /home/cs/autoupdate.sh \
+    chmod +x /home/cs/autoupdate.sh
+
 COPY ./entrypoint.sh /
 COPY ./server.cfg.template /
 ENTRYPOINT ["sh", "/entrypoint.sh"]
