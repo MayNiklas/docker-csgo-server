@@ -1,7 +1,7 @@
-FROM debian
 RUN dpkg --add-architecture i386
 RUN apt-get update && apt-get -y upgrade
 RUN apt-get install -y gcc-multilib libstdc++6:i386 libgcc1:i386 zlib1g:i386 libncurses5:i386 libc6:i386 wget nano net-tools
+FROM debian:stable-slim
 
 RUN mkdir -p /home/cs
 WORKDIR /home/cs
