@@ -30,16 +30,16 @@ fi
 EOF
 
 # Template out the server config
-su cs -c 'rm /home/cs/csgo_server/csgo/cfg/server.cfg && \
-          echo "'"$(cat /server.cfg.template)"'" >> /home/cs/csgo_server/csgo/cfg/server.cfg'
+su cs -c 'rm /home/cs/csgo_server/csgo/cfg/server.cfg'
+su cs -c 'echo "'"$(cat /server.cfg.template)"'" >> /home/cs/csgo_server/csgo/cfg/server.cfg'
 
 # Run the server as 'cs'
-su cs -c '/home/cs/csgo_server/srcds_run\
-	-authkey $WORKSHOPTOKEN\
-	-console -usercon\
-	-game csgo\
-	-maxplayers_override $MAXPLAYERS\
-	-net_port_try 1\
+su cs -c '/home/cs/csgo_server/srcds_run \
+	-authkey $WORKSHOPTOKEN \
+	-console -usercon \
+	-game csgo \
+	-maxplayers_override $MAXPLAYERS \
+	-net_port_try 1 \
 	-tickrate $TICKRATE \
 	-autoupdate \
 	-steamcmd_script /home/cs/autoupdate.sh \
