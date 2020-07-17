@@ -1,13 +1,12 @@
 FROM debian:stable-slim
-RUN dpkg --add-architecture i386
-RUN apt-get update &&\
+RUN apt-get update && \
     apt-get -y upgrade
 
-RUN apt-get install -y\
-    lib32gcc1\
-    lib32stdc++6\
-    libsdl2-2.0-0:i386\
-    wget
+RUN apt-get install -y \
+    lib32gcc1 \
+    lib32stdc++6 \
+    wget \
+    net-tools
 
 RUN mkdir -p /home/cs
 WORKDIR /home/cs
