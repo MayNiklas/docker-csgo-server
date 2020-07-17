@@ -1,4 +1,5 @@
 FROM debian:stable-slim
+RUN dpkg --add-architecture i386
 RUN apt-get update &&\
     apt-get -y upgrade
 
