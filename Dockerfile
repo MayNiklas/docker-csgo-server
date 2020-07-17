@@ -6,6 +6,7 @@ RUN apt-get update &&\
 RUN apt-get install -y\
     lib32gcc1\
     lib32stdc++6\
+    libsdl2-2.0-0:i386\
     wget
 
 RUN mkdir -p /home/cs
