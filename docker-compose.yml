@@ -6,6 +6,8 @@ services:
     ports:
       - "27015:27015/udp"
       - "27015:27015/tcp" # Needed for RCON
+    volumes:
+      - "./cs:/home/cs"
     environment:
       - TICKRATE=128      # Set to 64 ticks by default
 #      - UID=
