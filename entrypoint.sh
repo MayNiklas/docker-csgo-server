@@ -1,12 +1,13 @@
 #!/bin/bash
 
-# Template out the server config
-sh -c 'echo "'"$(cat /server.cfg.template)"'" >> /home/cs/csgo_server/csgo/cfg/server.cfg'
-
 # Set groups and permissions
 groupadd cs -g ${GID:-1000}
 useradd -u ${UID:-1000} -g ${GID:-1000} cs
 chown -R cs:cs /home/cs/csgo_server
+
+# Template out the server config
+su cs -c 'rm /home/cs/csgo_server/csgo/cfg/server.cfg && \
+          echo "'"$(cat /server.cfg.template)"'" >> /home/cs/csgo_server/csgo/cfg/server.cfg'
 
 # Run the server as 'cs'
 su cs -c '/home/cs/csgo_server/srcds_run\
