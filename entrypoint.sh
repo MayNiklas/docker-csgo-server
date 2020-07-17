@@ -3,7 +3,8 @@
 # Set groups and permissions
 groupadd cs -g ${GID:-1000}
 useradd -u ${UID:-1000} -g ${GID:-1000} cs
-chown -R cs:cs /home/cs/csgo_server
+chown -R cs:cs /home/cs
+chown cs:cs /server.cfg.template
 
 # Template out the server config
 su cs -c 'rm /home/cs/csgo_server/csgo/cfg/server.cfg && \
