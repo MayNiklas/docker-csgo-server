@@ -1,5 +1,39 @@
 # docker-csgo-server
 
+---
+
+## Quick Start
+
+**NOTE**: The Docker command provided in this quick start is given as an example
+and parameters should be adjusted to your need.
+
+Launch the csgo-server docker container with the following command:
+```
+docker run --rm -d \
+    -p "27015:27015/udp" \
+    -p "27015:27015/tcp" \
+    -e TOKEN=<API-token> \
+    -v $(pwd)/cs-server:/home/cs \
+    --name csgo-server \
+    mayniki/csgo-server
+```
+
+Where:
+  - `$(pwd)/cs-server:/home/cs`: This is where the application get's installed. In this case, your current directory is used.
+  - `TOKEN`: Insert your API token
+
+You can also use the following, in case you don't want persistant data on your system:
+```
+docker run --rm -d \
+    -p "27015:27015/udp" \
+    -p "27015:27015/tcp" \
+    -e TOKEN=<API-token> \
+    --name csgo-server \
+    mayniki/csgo-server
+```
+
+## Motivation
+
 Since I haven't found a CS GO container I liked, I wrote my own.
 
 Since the install is really big, the Container just contains the instructions to download and install the game. The install is stored within a mounted volume instead of a temporary one. This has the advantage of the game not redownloading every time you
