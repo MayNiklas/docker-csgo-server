@@ -14,7 +14,7 @@ As soon there is a new version of the game, the server will wait untill the curr
 ## Configuration template
 
 Use `server.cfg.template` to add anything you'd like to include in the server
-configuration. Variables will be replaced accordingly.
+configuration. Variables will be replaced accordingly. This requires you to build the container yourself from this repository.
 
 ## docker-compose.yml
 
