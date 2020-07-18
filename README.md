@@ -2,15 +2,8 @@
 
 Since I haven't found a CS GO container I liked, I wrote my own.
 
-Since the install is really big, you have to build the container on your host’s
-system. The install is stored within the container instead of the temporary
-Volume. This has the advantage of the game not redownloading every time you
-restart the container or change a parameter.
-
-Starting the container takes around 2 minutes: I included a chmod -R command for
-the whole install in the entrypoint file. This way, the container can be listed
-under a UID / GUI of your choice, which will be helpful for resource management
-on your host’s server.
+Since the install is really big, the Container just contains the instructions to download and install the game. The install is stored within a mounted volume instead of a temporary one. This has the advantage of the game not redownloading every time you
+restart the container or change a parameter. The first time you star the container the game is getting installed and starts afterwards. Afterwards, it just starts the allready installed game. 
 
 Feel free to fork the repository and change it to your liking.
 
