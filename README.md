@@ -18,8 +18,7 @@ configuration. Variables will be replaced accordingly. This requires you to buil
 
 ## docker-compose.yml
 
-All env's can be written within a docker-compose file. By building it yourself,
-you always install the latest install of the server!
+All env's can be written within a docker-compose file. They are written into the install every time you restart the container.
 
 
 ```
