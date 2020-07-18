@@ -66,15 +66,15 @@ As soon there is a new version of the game, the server will wait untill the curr
 
 
 
-
-## Configuration template
-
-Use `server.cfg.template` to add anything you'd like to include in the server
-configuration. Variables will be replaced accordingly. This requires you to build the container yourself from this repository.
-
 ## docker-compose.yml
 
-All env's can be written within a docker-compose file. They are written into the install every time you restart the container.
+Here is an example of a `docker-compose.yml` file that can be used with
+[Docker Compose](https://docs.docker.com/compose/overview/).
+
+Make sure to adjust according to your needs.
+
+The file can be found within the repository and is getting cloned within it.
+Therefore: docker-compose up should work out of the box.
 
 
 ```
@@ -82,7 +82,9 @@ version: '3'
 services:
   csgo-server:
     container_name: csgo-server
-    build: .
+    image: mayniki/csgo-server
+#    volumes:
+#      - "./cs:/home/cs"
     ports:
       - "27015:27015/udp"
       - "27015:27015/tcp" # Needed for RCON
@@ -106,3 +108,9 @@ services:
     stdin_open: true
     tty: true
 ```
+
+
+## Configuration template
+
+Use `server.cfg.template` to add anything you'd like to include in the server
+configuration. Variables will be replaced accordingly. This requires you to build the container yourself from this repository.
