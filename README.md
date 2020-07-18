@@ -45,6 +45,28 @@ Feel free to fork the repository and change it to your liking.
 
 As soon there is a new version of the game, the server will wait untill the current game finishes. It will automatically update the game before restarting itself.
 
+## Environment Variables
+
+| Variable       | Description                                  | Default |
+|----------------|----------------------------------------------|---------|
+|`TICKRATE`| The servers tickrate. You can set it to 64 if you want to | `32` |
+|`UID`| ID of the user the application runs as.  See [User/Group IDs](#usergroup-ids) to better understand when this should be set. | `1000` |
+|`GID`| ID of the group the application runs as.  See [User/Group IDs](#usergroup-ids) to better understand when this should be set. | `1000` |
+|`TOKEN`| Your API KEY - needed for publicly hosting a CS server | 'NULL' |
+|`WORKSHOPTOKEN`| Your Steam workshop API KEY - needed for accessing Workshop maps | 'NULL' |
+|`CSGO_HOSTNAME`| Enter the name of your CS server | 'NULL' |
+|`MAXPLAYERS`| Enter the maximum number of players beeing able to join | '10' |
+|`GAMETYPE`| Gametype - take a look at the CS wiki | '0' |
+|`GAMEMODE`| Gamemode - take a look at the CS wiki | '1' |
+|`MAPGROUP`| Default mapgroup | 'mg_bomb' |
+|`STARTMAP`| Default map | 'de_dust' |
+|`RCONPW`| Enter a RCON pw to controll the servers console in game | 'NULL' |
+|`PW`| Enter a pw being needed to join | 'NULL' |
+|`REGION`| Enter servers region | '3' |
+
+
+
+
 ## Configuration template
 
 Use `server.cfg.template` to add anything you'd like to include in the server
