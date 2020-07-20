@@ -1,4 +1,6 @@
-FROM debian:stable-slim
+ARG ARCH=
+FROM ${ARCH}debian:buster-slim
+
 RUN apt-get update && \
     apt-get -y upgrade
 
