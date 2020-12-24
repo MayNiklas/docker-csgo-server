@@ -8,6 +8,8 @@ name: Building docker containers
 on:
   push:
     branches: master
+  schedule:
+    - cron: "0 2 * * 1"
 jobs:
   building:
     runs-on: ubuntu-latest
